@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { testDatabaseConnection } from "@/lib/testDatabase";
-import { EnvDebugger } from "@/components/EnvDebugger";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -46,7 +45,6 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
-          <EnvDebugger />
         </TooltipProvider>
       </AuthProvider>
     </QueryClientProvider>
